@@ -1,6 +1,6 @@
 # Financial Mathematics I: my study portfolio
 
-*Your name*, Queen Mary University of London, 2026–27.
+*Lamiem Rahman Ali, Queen Mary University of London, 2026–27.
 
 My notes, worked examples, solved exercises and Excel models for the
 module MTH6154 Financial Mathematics I.
@@ -19,6 +19,7 @@ module MTH6154 Financial Mathematics I.
 | 11 | Black–Scholes | | |
 
 ## AI use
+None
 
 Write here what, if anything, you used AI tools for (e.g. "asked Copilot why
 my `NORM.S.DIST` formula gave an error"). Write "None" otherwise.
