@@ -1,6 +1,6 @@
 # Financial Mathematics I: my study portfolio
 
-*Lamiem Rahman Ali, Queen Mary University of London, 2026–27.
+Lamiem Rahman Ali, Queen Mary University of London, 2026–27.
 
 My notes, worked examples, solved exercises and Excel models for the
 module MTH6154 Financial Mathematics I.
