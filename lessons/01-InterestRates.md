@@ -15,6 +15,10 @@ If interest is added more and more often in a year, the number of compounding pe
 The formula for continuously compounded interest is: $A = Pe^{rT}$, where P is the initial amount, r is the annual nominal interest rate and T is the time in years. 
 
 The effective interest rate for continuously compounded interest rate is: $r_{eff}=e^r - 1$. This shows the actual yearly increase after accounting for continuous compounding.
+### 3. Doubling Rule and Rule of 72
+If an investment grows constantly at an interest rate r, the doubling rule tells us how many years it takes for the original amount to become twice as large. To find T which represents the number of years it takes the investment to double we start with the equation: $Pe^{rT} =2P$, then dividing both sides by P we get $e^{rT} = 2$ then taking natural logs we get $rT = \ln 2$ and then finally solving for T gives: $T = \frac{\ln 2}{r} \approx \frac{0.693}{r}$.
+
+Also, we can use the Rule of 72 to get a quick estimate of how many years it takes for an investment to double by dividing 72 by the interest rate given as a percentage. The formula is: $T \approx\frac{72}{R}$. For example, if r = 0.12 then $R=12$, where R is the rate as a percentage, so $T \approx 72/12 = 6$ years.
 
 ## My example
 
