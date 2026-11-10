@@ -19,6 +19,9 @@ The effective interest rate for continuously compounded interest rate is: $r_{ef
 If an investment grows constantly at an interest rate r, the doubling rule tells us how many years it takes for the original amount to become twice as large. To find T which represents the number of years it takes the investment to double we start with the equation: $Pe^{rT} =2P$, then dividing both sides by P we get $e^{rT} = 2$ then taking natural logs we get $rT = \ln 2$ and then finally solving for T gives: $T = \frac{\ln 2}{r} \approx \frac{0.693}{r}$.
 
 Also, we can use the Rule of 72 to get a quick estimate of how many years it takes for an investment to double by dividing 72 by the interest rate given as a percentage. The formula is: $T \approx\frac{72}{R}$. For example, if r = 0.12 then $R=12$, where R is the rate as a percentage, so $T \approx 72/12 = 6$ years.
+### 1.2 Variable Interest Rates
+Interest rates do not always stay the same over time and they can increase or decrease, so we use (r(t)) to show the interest rate at a particular moment in time. This is called the instantaneous rate. We assume that interest is continuously compounded, meaning that interest is added constantly and the initial amount deposited or borrowed is P(0) and P(t) represents the amount after time t. We use the formula: $P'(t) = P(t)r(t)$
+
 
 ## My example
 
