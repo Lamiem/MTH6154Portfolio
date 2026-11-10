@@ -3,15 +3,7 @@
 [Back to contents](../README.md)
 
 ## Summary
-
-In your own words, the main ideas of the lesson. Short sentences are fine.
-
-Maths is written between dollar signs. For example `$A = P(1+i)^n$` shows
-as $A = P(1+i)^n$, and a displayed formula uses double dollars:
-
-$$
-\left(1+\frac{i^{(m)}}{m}\right)^m = 1+i
-$$
+### 1.Effective Interest Rate
 
 ## My example
 
