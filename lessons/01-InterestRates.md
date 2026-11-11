@@ -25,8 +25,81 @@ Interest rates do not always stay the same over time and they can increase or de
 
 ## My example
 
-A situation you made up (your own numbers, not the ones in the lecture
-notes), worked step by step.
+### Savings account
+Suppose I deposit £3,500 into a savings account offering a nominal interest rate of 5%, compounded monthly. I leave the money in the account for 4 years without making any withdrawals or additional deposits.
+
+I want to investigate how much the savings will grow, how the effective interest rate compares with the nominal rate, and how inflation affects the value of the savings.
+
+## Questions:**
+
+1. How much will I have in my account after 4 years?
+2. What is the effective annual interest rate?
+3. How much would I have if the interest was continuously compounded instead?
+4. If inflation is 3% per year, what is the real interest rate?
+
+## Solutions
+
+**1) Amount after 4 years**
+Interest is compounded monthly so I use the formula:
+$$A = P\left(1+\frac{r}{n}\right)^{nT}$$
+
+So using the values:
+
+$$A = 3500\left(1+\frac{0.05}{12}\right)^{12(4)}$$
+
+$$A = 3500(1.0041667)^{48}$$
+
+$$A = £4273.13$$
+
+Therefore, after 4 years, my savings will grow to approximately £4,273.13.
+
+**2) Effective interest rate**
+
+The formula for the effective interest rate is:
+
+$$r_{eff} = \left(1+\frac{r}{n}\right)^n -1$$
+
+Using the values:
+
+$$r_{eff} = \left(1+\frac{0.05}{12}\right)^{12} - 1$$
+
+$$r_{eff} = 0.05116$$
+
+$$r_{eff} = 5.1162\%$$
+
+The effective interest rate is approximately 5.1162%, which is slightly higher than the nominal rate of 5% because interest is added monthly.
+
+**3) Continuous Compounding**
+
+Formula for continuously compounded interest:
+
+$$A = Pe^{rT}$$
+
+So:
+
+$$A = 3500e^{0.05(4)}$$
+
+$$A = 3500e^{0.2}$$
+
+$$A = £4274.91$$
+
+This is slightly higher than monthly compounding because interest builds up continuously.
+
+**4) Real interest rate**
+
+Inflation reduces the purchasing power of money, so I use the Formula for real interest rate:
+
+$$r_a = \frac{r_{eff} - r_{inf}}{1 + r_{inf}}$$
+
+where $r_{inf}$ is the inflation rate.
+
+So, substituting the values give me:
+
+$$r_a = \frac{0.0511619 - 0.03}{1 + 0.03} = 0.0205455$$
+
+$$r_a = 2.0546\%$$
+
+Therefore, after accounting for inflation, the real annual return on my savings is approximately 2.0546%.
 
 ## Solved exercises
 
