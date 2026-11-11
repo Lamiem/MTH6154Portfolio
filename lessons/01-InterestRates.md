@@ -103,9 +103,41 @@ Therefore, after accounting for inflation, the real annual return on my savings 
 
 ## Solved exercises
 
-### Exercise 1.x (from Exercise Sheet 1)
+### Exercise 6 (Week 1 exercise sheet): Credit card companies
 
-Question, then your solution.
+**Question:** Company A charges a 23.4% nominal rate compounded daily, company B charges a 23.5% compounded monthly, and company C charges 24.2% compounded annually. Which company offers the best deal?
+
+**Solution:**
+
+In order to compare which company has the best deal, we have to use the effective annual interest rate formula:
+
+$$r_{eff} = \left(1+\frac{r}{n}\right)^n -1$$
+
+The best deal is the one with the lowest effective interest rate, as it means paying the least total interest over a year.
+
+**Company A:** nominal rate $r = 23.4\% = 0.234$, compounded daily so $n = 365$.
+
+$$r_{eff,A} = \left(1+\frac{0.234}{365}\right)^{365} - 1\approx (1.000641)^{365} -1 = 0.263550 = 26.36\%$$
+
+**Company B:** nominal rate $r = 23.5\% = 0.235$, compounded monthly so $n = 12$.
+
+$$r_{eff,B} = \left(1+\frac{0.235}{12}\right)^{12} - 1 \approx (1.019583)^{12} - 1 = 0.26204 = 26.20\%$$
+
+**Company C:** nominal rate $r = 24.2\% = 0.242$, compounded annually so $n = 1$.
+
+$$r_{eff,C} = \left(1+\frac{0.242}{1}\right)^{1} - 1 = 0.24200 = 24.20\%$$
+
+**Conclusion:**
+
+
+| Company | Effective rate |
+|---|---|
+| A | 26.36% |
+| B | 26.20% |
+| C | 24.20% |
+
+
+Therefore, company C offers the best deal because it has the lowest effective interest rate.
 
 ## Spreadsheet
 
