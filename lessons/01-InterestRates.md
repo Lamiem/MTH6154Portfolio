@@ -139,6 +139,52 @@ $$r_{eff,C} = \left(1+\frac{0.242}{1}\right)^{1} - 1 = 0.24200 = 24.20\%$$
 
 Therefore, company C offers the best deal because it has the lowest effective interest rate.
 
+### Exercise 11 (Week 1 exercise sheet)
+
+**Question:** In 1626 Peter Minuit bought Manhattan for goods worth 24 dollars. Find the value of this sum in the year 2026 at 5% compounded (a) continuously and (b) annually.
+
+**Solution:**
+
+The time is $T = 2026 - 1626 = 400$ years, the principal is $P = 24$ and the rate is $r = 5\% = 0.05$.
+
+**(a) Continuously compounded**
+
+The formula for continuously compounded interest is:
+
+$$A = Pe^{rT}$$
+
+$$A = 24 \times e^{0.05 \times400}$$
+
+$$A = 24e^{20}$$
+
+$$e^{20} \approx 485{,}165{,}195.41$$
+
+$$A = 24 \times 485{,}165{,}195.41 \approx 11{,}643{,}964{,}689.83$$
+
+So the value is approximately 11.64 billion dollars.
+
+**(b) Compounded annually**
+
+The formula for annual compounding is:
+
+$$A = P(1+r)^T$$
+
+$$A = 24 \times (1+0.05)^{400}$$
+
+$$A = 24 \times (1.05)^{400}$$
+
+$$(1.05)^{400} \approx 299{,}033{,}351.25$$
+
+$$A = 24 \times 299{,}033{,}351.25 \approx 7{,}176{,}800{,}429.97$$
+
+So the value is approximately 7.18 billion dollars.
+
+**Conclusion:**
+
+Compounding continuously gives a noticeably bigger total than annual compounding, showing how compounding more frequently makes a massive difference over long periods of time.
+
+
+
 ## Spreadsheet
 
 [01-InterestRates.xlsx](../spreadsheets/01-InterestRates.xlsx): what it
