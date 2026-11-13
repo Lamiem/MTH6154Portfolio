@@ -41,6 +41,19 @@ $$P(t) = P(0)\exp\left(\int_0^t r(u)\,du\right)$$
 
 If $r$ is constant, the formula becomes $P(t) = P(0)e^{rt}$, which is the standard continuous compounding formula.
 
+The yield curve $\bar{r}{t}$ represents the average rate if i replaced the changing rate with one constant rate over the period, meaning the single steady rate that ends up with the exact same balance. The formula for the yield curve is:
+
+$$\bar{r}{t} = \frac{1}{t}\int_0^t r(u)\,du$$
+
+Using the yield curve, the total bank balance at time $t$ can be written as:
+
+$$P(t) = P(0)e^{t\bar{r}(t)}$$
+
+From this, the effective interest rate over the period is given by:
+
+$$r_{eff}(t) = e^{t\bar{r}(t)} - 1$$
+
+
 ### 5. Inflation
 
 Inflation means prices go up across the board over time, so our cash doesn't stretch as far as it used to. We usually keep track of this by following the price changes of everyday goods we buy using an index like the Retail Price Index (RPI). If we let $r_{inf}$ be the annualised inflation rate, it means 1 pound today has the same purchasing power as $1 + r_{inf}$ pounds in a year. For example, at a 3% inflation rate, a £4 coffee today would cost £4.12 next year.
