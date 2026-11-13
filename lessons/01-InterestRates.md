@@ -23,6 +23,23 @@ Also, we can use the Rule of 72 to get a quick estimate of how many years it tak
 Interest rates do not always stay the same over time and they can increase or decrease, so we use (r(t)) to show the interest rate at a particular moment in time. This is called the instantaneous rate. We assume that interest is continuously compounded, meaning that interest is added constantly and the initial amount deposited or borrowed is P(0) and P(t) represents the amount after time t. We use the formula: $P'(t) = P(t)r(t)$
 
 
+### 5. Inflation
+
+Inflation means prices go up across the board over time, so our cash doesn't stretch as far as it used to. We usually keep track of this by following the price changes of everyday goods we buy using an index like the Retail Price Index (RPI). If we let $r_{inf}$ be the annualised inflation rate, it means 1 pound today has the same purchasing power as $1 + r_{inf}$ pounds in a year. For example, at a 3% inflation rate, a £4 coffee today would cost £4.12 next year.
+
+When we want to see how an investment performs once we factor in inflation, we use the real or inflation adjusted interest rate $r_a$, which shows how much our purchasing power actually grows. For a simple quoted interest rate, we calculate this real rate by adjusting the future value of a deposit into today's money using the formula: 
+
+$$r_a = \frac{r - r_{inf}}{1 + r_{inf}}$$
+
+If we are dealing with compounding interest, we simply replace the nominal rate with the effective interest rate, so the formula becomes:
+
+$$r_a = \frac{r_{eff} - r_{inf}}{1 + r_{inf}}$$
+
+Furthermore, because the inflation rate is usually small (like 2% or 3%), we can often use a quick approximation:
+
+$$r_a \approx r_{eff} - r_{inf}$$
+
+
 ## My example
 
 ### Savings account
