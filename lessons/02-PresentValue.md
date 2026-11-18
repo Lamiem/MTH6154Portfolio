@@ -77,13 +77,57 @@ In this formula, $P$ is the initial investment, $a_i$ is the payment received at
 In general, solving for $r$ is difficult because it requires finding the roots of a polynomial equation, so it is usually done numerically using trial and error or software tools like Excel. You can judge whether an investment is good by comparing its IRR to the market interest rate: if the IRR exceeds the market rate, it is worth making, but if it is lower than the market rate, it is a bad investment.
 
 
-
-
-
 ## My example
 
+### Small business equipment investment
 
-## Solved exercises
+You spend £5,000 today on bakery equipment that pays you back £2,000 at the end of the first year and £4,000 at the end of the second year. The bank or market interest rate you could get elsewhere is 6% per year.
 
+I want to find out if buying this equipment is actually worth it compared to putting your money in the market.
 
-## Spreadsheet
+**Questions:**
+
+1. What is the present value of the cash returns at the 6% market rate?
+2. What is the total rate of return and the equivalent effective annual rate over the two years?
+3. What is the internal rate of return (IRR)?
+4. Is it a good investment compared to the market rate?
+
+## Solutions
+
+**1) Present value of the returns**
+
+Since the cash returns arrive at different times, I discount each payment back to today and sum them up, using the formula:
+
+$$PV(\mathbf{a}) = \sum_{i=1}^n \frac{a_i}{(1+r)^i}$$
+
+$$PV = \frac{2{,}000}{(1 + 0.06)^1} + \frac{4{,}000}{(1 + 0.06)^2} = \frac{2{,}000}{1.06} + \frac{4{,}000}{1.1236} = 1{,}886.79 + 3{,}559.99 = 5{,}446.78$$
+
+The present value of the returns is £5,446.78, meaning the future cash you get back is worth more today than the £5,000 you paid upfront.
+
+**2) Rate of return and effective annual rate**
+
+To measure the overall gain, I use the rate of return formula, and to turn it into a yearly rate I use the equivalent effective annual rate formula:
+
+$$R = \frac{P_{final} - P}{P} \quad \text{and} \quad r = \left(\frac{P_{final}}{P}\right)^{1/T} - 1$$
+
+$$R = \frac{(2{,}000 + 4{,}000) - 5{,}000}{5{,}000} = \frac{1{,}000}{5{,}000} = 0.20 \text{ (or 20\%)}$$
+
+$$r = \left(\frac{6{,}000}{5{,}000}\right)^{1/2} - 1 = (1.2)^{0.5} - 1 \approx 1.0954 - 1 = 0.0954 \text{ (or 9.54\%)}$$
+
+The total rate of return is 20% over two years, which works out to an equivalent effective annual growth rate of 9.54%. This calculation treats the whole £6,000 as if it arrived at the end of year 2, which ignores that £2,000 arrives a year earlier, explaining why the true internal rate of return (11.65%) is higher than 9.54%.
+
+**3) Internal rate of return (IRR)**
+
+The IRR is the rate that makes the present value of the cash flows equal to the initial investment, so I set up the equation:
+
+$$P = \sum_{i=1}^n \frac{a_i}{(1+r)^{t_i}} \implies 5{,}000 = \frac{2{,}000}{1+r} + \frac{4{,}000}{(1+r)^2}$$
+
+Setting $x = 1+r$, multiplying by $x^2$, and rearranging gives the quadratic equation $5x^2 - 2x - 4 = 0$. Solving for the positive root gives $x \approx 1.1165$, so $r = 1.1165 - 1 = 0.1165$.
+
+The internal rate of return is 11.65%, which is the exact discount rate that makes the present value of the payments equal your starting £5,000 cost.
+
+**4) Investment decision**
+
+To decide, I compare the IRR with the market rate: $\text{IRR} (11.65\%) > \text{Market Rate} (6.00\%)$.
+
+Since the internal rate of return beats the 6% market rate, buying the equipment is a good investment.
