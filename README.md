@@ -19,7 +19,13 @@ module MTH6154 Financial Mathematics I.
 | 11 | Black–Scholes | | |
 
 ## AI use
-None
 
-Write here what, if anything, you used AI tools for (e.g. "asked Copilot why
-my `NORM.S.DIST` formula gave an error"). Write "None" otherwise.
+I used Claude (an AI assistant) as a study helper during Week 1. I used it to:
+
+- explain what the coursework asked for and how to set up and use GitHub
+- understand how Markdown and LaTeX formatting work, and fix formatting mistakes (for example brackets and dollar signs in my formulas)
+- check my arithmetic and point out errors in my working
+- give feedback on my drafts, such as unclear sentences and missing parts
+- explain how to write Excel formulas and fix errors in them, and suggest how to lay out the spreadsheet
+
+I wrote the summaries, my example, the solved exercises and the spreadsheet myself.
