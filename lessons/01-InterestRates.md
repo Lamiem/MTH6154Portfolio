@@ -8,7 +8,7 @@ If we borrow or invest an amount P, at nominal interest r, after one year we pay
 
 The total amount owed or earned is higher when interest is compounded because interest is being charged on top of interest that has already been added. To compare interest rates with different compounding frequencies fairly, we use the effective interest rate which shows the actual percentage growth over a full year. 
 
-The formula is $r_{eff} = \left(1+\frac{r}{n}\right)^n- 1$. The effective rate r_eff is bigger than r whenever n>1.
+The formula is $r_{eff}$ = \left(1+\frac{r}{n}\right)^n- 1$. The effective rate r_eff is bigger than r whenever $n>1$.
 ### 2. Continuous Compounding
 If interest is added more and more often in a year, the number of compounding periods increases towards infinity and we say interest is continuously compounded. This means interest is continuously building over time, with each new amount of interest being included in the balance straight away.
 
@@ -41,9 +41,9 @@ $$P(t) = P(0)\exp\left(\int_0^t r(u)\,du\right)$$
 
 If $r$ is constant, the formula becomes $P(t) = P(0)e^{rt}$, which is the standard continuous compounding formula.
 
-The yield curve $\bar{r}{t}$ represents the average rate if i replaced the changing rate with one constant rate over the period, meaning the single steady rate that ends up with the exact same balance. The formula for the yield curve is:
+The yield curve $\bar{r}(t)$ represents the average rate if I replaced the changing rate with one constant rate over the period, meaning the single steady rate that ends up with the exact same balance. The formula for the yield curve is:
 
-$$\bar{r}{t} = \frac{1}{t}\int_0^t r(u)\,du$$
+$$\bar{r}(t) = \frac{1}{t}\int_0^t r(u)\,du$$
 
 Using the yield curve, the total bank balance at time $t$ can be written as:
 
@@ -78,7 +78,7 @@ Suppose I deposit £3,500 into a savings account offering a nominal interest rat
 
 I want to investigate how much the savings will grow, how the effective interest rate compares with the nominal rate, and how inflation affects the value of the savings.
 
-## Questions:**
+##Questions:**
 
 1. How much will I have in my account after 4 years?
 2. What is the effective annual interest rate?
