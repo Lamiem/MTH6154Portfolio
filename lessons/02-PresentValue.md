@@ -128,6 +128,6 @@ The internal rate of return is 11.65%, which is the exact discount rate that mak
 
 **4) Investment decision**
 
-To decide, I compare the IRR with the market rate: $\text{IRR} (11.65\%) > \text{Market Rate} (6.00\%)$.
+To decide, I compare the IRR with the market rate. The IRR is 11.65%, which is higher than the market rate of 6%.
 
 Since the internal rate of return beats the 6% market rate, buying the equipment is a good investment.
