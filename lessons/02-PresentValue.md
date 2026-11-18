@@ -50,8 +50,31 @@ $$D(T) = e^{-rT}$$
 
 This lets you find the present value of any payment stream whether interest compounds monthly, continuously, or shifts year by year.
 
+### 6. Rate of return
 
+When you invest an amount $P$, the final value $P_{final}$ is called the return. The profit is the cash made on top of your starting amount, defined as $\text{profit} = P_{final} - P$. Dividing that profit by the starting amount gives the rate of return.
 
+$$R = \frac{P_{final} - P}{P}$$
+
+In this formula, $P$ is the starting principal and $P_{final}$ is the final value of the investment. This gives your total percentage gain, but it ignores how long the investment took. That is a problem, because a 30% return is great over two weeks but poor over forty years.
+
+### 7. Annualised rate and equivalent effective interest rate
+
+Because the basic rate of return ignores time, a naive annualised rate simply divides the return by the number of years, $R/T$. However, this ignores compounding. A better approach is finding the equivalent effective interest rate $r$ that a bank would need to offer so that $P(1+r)^T = P_{final}$. Rearranging this equation gives the true annual growth rate. This links directly back to the compounding ideas from Week 1.
+
+$$r = \left(\frac{P_{final}}{P}\right)^{1/T} - 1$$
+
+In this formula, $r$ is the equivalent effective annual interest rate, $P$ is the starting principal, $P_{final}$ is the final value, and $T$ is the time in years. This lets you fairly compare investments of any duration against standard bank rates.
+
+### 8. Internal rate of return (IRR)
+
+When an investment involves a cash flow stream with payments at multiple different times rather than a single lump sum, we use the internal rate of return. The IRR is the hypothetical effective interest rate that makes the present value of all cash flows equal to the initial investment. For positive cash flows, there is exactly one such rate.
+
+$$P = \sum_{i=1}^n \frac{a_i}{(1+r)^{t_i}}$$
+
+In this formula, $P$ is the initial investment, $a_i$ is the payment received at time $t_i$, and $r$ is the internal rate of return.
+
+In general, solving for $r$ is difficult because it requires finding the roots of a polynomial equation, so it is usually done numerically using trial and error or software tools like Excel. You can judge whether an investment is good by comparing its IRR to the market interest rate: if the IRR exceeds the market rate, it is worth making, but if it is lower than the market rate, it is a bad investment.
 
 
 
