@@ -235,5 +235,6 @@ Compounding continuously gives a noticeably bigger total than annual compounding
 
 ## Spreadsheet
 
-[01-InterestRates.xlsx](../spreadsheets/01-InterestRates.xlsx): what it
-does, which cells to change and what to look at.
+[My interest rate spreadsheet](../spreadsheets/01-InterestRates.xlsx)
+
+This sheet compares how an initial sum of money grows over time under simple, compound, and continuous interest. To use it, simply update the yellow input cells with your own principal, interest rate, time period, compounding frequency, and inflation rate. Once updated, check the resulting amounts at the end of the period, the effective annual rate, the real interest rate after inflation, and the chart. It clearly shows how closely matched compound and continuous interest are over time compared to simple interest.
