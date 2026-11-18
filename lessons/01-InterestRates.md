@@ -8,7 +8,7 @@ If we borrow or invest an amount P, at nominal interest r, after one year we pay
 
 The total amount owed or earned is higher when interest is compounded because interest is being charged on top of interest that has already been added. To compare interest rates with different compounding frequencies fairly, we use the effective interest rate which shows the actual percentage growth over a full year. 
 
-The formula is $r_{eff}$ = \left(1+\frac{r}{n}\right)^n- 1$. The effective rate r_eff is bigger than r whenever $n>1$.
+The formula is $r_{eff} = \left(1+\frac{r}{n}\right)^n - 1$. The effective rate $r_{eff}$ is bigger than $r$ whenever $n > 1$.
 ### 2. Continuous Compounding
 If interest is added more and more often in a year, the number of compounding periods increases towards infinity and we say interest is continuously compounded. This means interest is continuously building over time, with each new amount of interest being included in the balance straight away.
 
