@@ -252,3 +252,12 @@ So the present value is approximately £43,911.67.
 **Conclusion:**
 
 Even though a perpetuity pays forever, its present value is finite and depends heavily on when those payments start: starting today adds a full £2,500 compared to starting next year (£65,000 vs £62,500), while delaying the start by 10 years drops the present value by nearly £18,600 (to £43,911.67) because every payment has to be discounted an extra 9 years.
+
+## Spreadsheet
+
+[My present value spreadsheet](../spreadsheets/02-PresentValue.xlsx)
+
+This sheet works out the present value of returns, net present value, and internal rate of return for an investment, starting with a £5,000 cash outflow for bakery equipment, and tells you whether it beats the market rate. You can adjust the market interest rate and each year's cash flow in the yellow cells to test different scenarios. Look at the present value, net present value, internal rate of return, investment decision, and the net present value chart as you tweak these inputs. The chart shows that net present value drops as interest rates rise, crossing zero right at the internal rate of return.  
+
+
+
