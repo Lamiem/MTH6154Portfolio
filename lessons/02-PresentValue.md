@@ -206,3 +206,49 @@ Comparing the two, $PV_B > PV_A$, so Company B offers the better deal under cont
 Which offer is better depends on the compounding method: Company A wins under annual compounding (£235,302.31 vs £235,276.57), while Company B wins under continuous compounding (£234,978.28 vs £234,952.09). The two packages are extremely close, with a difference of only about £26 either way.
 
 Continuous compounding at a nominal 3.75% produces a higher effective rate (about 3.82%, from $e^{0.0375} - 1$), meaning every future payment is discounted more heavily. This hurts Company A's large year-3 payment more than Company B, whose £15,000 signing bonus is paid today at $t = 0$ and isn't discounted at all.
+
+### Exercise 4 (Week 2 exercise sheet): Perpetuity
+
+**Question:** A perpetuity pays £2,500 every year. The effective annual interest rate is 4%. Calculate its present value if: (a) the first payment is in one years time, (b) the first payment is today, (c) the first payment is in 10 years' time.
+
+**Solution:**
+
+The annual payment is $a = 2{,}500$ and the effective annual interest rate is $r = 4\% = 0.04$.
+
+**(a) First payment in one year's time**
+
+The standard perpetuity formula assumes payments start at $t = 1$, so the present value is:
+
+$$PV = \frac{a}{r}$$
+
+$$PV = \frac{2{,}500}{0.04} = 62{,}500$$
+
+So the present value is £62,500.
+
+**(b) First payment today**
+
+Since the first payment arrives immediately at $t = 0$, it is not discounted, and the remaining payments form a standard perpetuity starting in one year's time:
+
+$$PV = a + \frac{a}{r}$$
+
+$$PV = 2{,}500 + \frac{2{,}500}{0.04}$$
+
+$$PV = 2{,}500 + 62{,}500 = 65{,}000$$
+
+So the present value is £65,000.
+
+**(c) First payment in 10 years' time**
+
+If the first payment arrives at $t = 10$, then at $t = 9$ it looks just like a standard perpetuity whose first payment arrives one year later (at $t = 10$). Its value at $t = 9$ is $\frac{a}{r}$, which we then discount back 9 years to today:
+
+$$PV = \frac{a/r}{(1 + r)^9}$$
+
+$$PV = \frac{62{,}500}{(1 + 0.04)^9}$$
+
+$$PV = \frac{62{,}500}{(1.04)^9} \approx \frac{62{,}500}{1.42331} \approx 43{,}911.67$$
+
+So the present value is approximately £43,911.67.
+
+**Conclusion:**
+
+Even though a perpetuity pays forever, its present value is finite and depends heavily on when those payments start: starting today adds a full £2,500 compared to starting next year (£65,000 vs £62,500), while delaying the start by 10 years drops the present value by nearly £18,600 (to £43,911.67) because every payment has to be discounted an extra 9 years.
