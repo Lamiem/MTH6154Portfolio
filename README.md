@@ -20,7 +20,7 @@ module MTH6154 Financial Mathematics I.
 
 ## AI use
 
-I used Claude (an AI assistant) as a study helper during Week 1. I used it to:
+I used Claude (an AI assistant) as a study helper throughout this portfolio. I used it to:
 
 - explain what the coursework asked for and how to set up and use GitHub
 - understand how Markdown and LaTeX formatting work, and fix formatting mistakes (for example brackets and dollar signs in my formulas)
