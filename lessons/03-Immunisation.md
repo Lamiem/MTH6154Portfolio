@@ -50,6 +50,12 @@ $$c_A \ge c_L$$
 
 When all three of these conditions hold, up to very small errors, a small change in interest rates will not cause the company's net position to fall.
 
+### 5. Immunising in practice
+
+To put immunisation into practice, a company can use zero-coupon bonds, which pay one set amount on a single set date. Choosing how much to hold of two different maturities gives two equations to solve for the two bond amounts so that present values and durations match. Once those amounts are found, you still need to check that the convexity condition holds. Because any mix of bonds has a duration sitting between its earliest and latest maturity dates, you won't be able to match durations if your liabilities' duration falls outside that range. When interest is compounded yearly instead, the same ideas still apply using $\beta = 1/(1+r)$ in the present value sum:
+
+$$V(r) = \sum_{i=1}^{n} C_i \beta^{t_i}$$
+
 
 ## My example
 
