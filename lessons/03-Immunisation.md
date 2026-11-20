@@ -1,6 +1,8 @@
 # 3. Immunisation
 
-### Summary
+Back to contents](../README.md)
+
+## Summary
 
 ### 1. Immunisation
 
@@ -16,7 +18,7 @@ Here $D(t_i; r)$ is the discount factor, equal to $e^{-rt_i}$ for continuous com
 
 ### 3. Effective duration and duration
 
-When interest rates go up, the present value of a payment stream drops, and we can use derivatives to see how fast that happens. Instead of leaving the first derivative in pounds or dollars, effective duration divides by $V(r)$ so you get a measure in years rather than money. . The minus sign is there so the result comes out positive when all cash flows are positive, though negative payments can make it negative.
+When interest rates go up, the present value of a payment stream drops, and we can use derivatives to see how fast that happens. Instead of leaving the first derivative in pounds or dollars, effective duration divides by $V(r)$ so you get a measure in years rather than money. The minus sign is there so the result comes out positive when all cash flows are positive, though negative payments can make it negative.
 
 $$\nu = -\frac{V'(r)}{V(r)}$$
 
