@@ -28,6 +28,27 @@ When all the payments are positive, duration acts like a weighted average of the
 
 Effective duration and duration are closely tied together: with continuous compounding we get $\nu = \tau$, and with yearly compounding we get $\nu = \beta\tau$, where $\beta = 1/(1+r)$. Since $\nu$ is just a multiple of $\tau$, a larger duration means the present value falls faster when interest rates rise.
 
+### 4. Redington immunisation
+
+If a company holds assets to pay off future liabilities, matching their present values at the current interest rate $r_0$ only guarantees balance at that exact rate, and it can fail as soon as $r$ moves. To stop a small rate move from leaving the company short, we line up three things.
+
+First, the present value of the assets equals the present value of the liabilities at the starting interest rate $r_0$:
+
+$$V_A(r_0) = V_L(r_0)$$
+
+Second, even if both sides have the same value right now, one side might drop faster than the other when interest rates move. Matching the effective durations makes sure both sides react by the same amount to a first approximation:
+
+$$\nu_A = \nu_L$$
+
+Third, because present value curves rather than moving in a straight line, effective duration only covers the initial slope. Convexity measures how much that curve bends:
+
+$$c = \frac{V''(r)}{V(r)}$$
+
+Making sure the assets have at least as much convexity as the liabilities means any extra bend in the curve works in the company's favour. So, up to tiny errors, the company's value won't fall:
+
+$$c_A \ge c_L$$
+
+When all three of these conditions hold, up to very small errors, a small change in interest rates will not cause the company's net position to fall.
 
 
 ## My example
