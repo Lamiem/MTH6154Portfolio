@@ -16,6 +16,13 @@ $$PV = D(T_1)C_1 + D(T_2)C_2 + \dots + D(T_n)C_n + D(T_n)RP$$
 
 For a zero coupon bond with face value 1 that is redeemable at par and matures at time $T$, there are no coupons, so its present value is simply $D(T)$.
 
+### 3. No arbitrage and the law of one price
+
+An arbitrage is basically a free lunch, a risk free profit at no cost. In a frictionless market (no trading costs or restrictions), we assume no arbitrage, because if a free profit ever popped up, traders would jump on it until the price gap closed.
+
+From that comes the law of one price: if two investments give you the exact same future cash flows, they have to sell for the same price today. Because we could replicate a bond's payouts by putting its present value in a bank account, a bond's fair price has to equal its present value. It also means the price $V_T$ of a unit zero coupon bond paying £! at expiry $T$ equals the discount factor $D(T)$, so we can price any coupon bound by adding up each payment times the price of the zero coupon bond that expires on the date:
+
+$$PV = V_[T_1]C_1 + \dots + V_{T_n}C_n + V_{T_n}RP$$
 
 ## My example
 
