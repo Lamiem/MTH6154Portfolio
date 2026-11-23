@@ -88,7 +88,7 @@ The assets come out about £3.34 ahead of the liabilities (£7,411.52 against £
 
 ## Solved exercises
 
-### Exercise 2
+### Exercise 2 (Week 3 exercise sheet)
 
 The interest rate is $4\%$, continuously compounded, so a payment $C$ at time $t$ has present value $Ce^{-0.04t}$. For continuous compounding, the effective duration equals the duration.
 
@@ -124,7 +124,7 @@ $$\nu = D \approx 3.49 \text{ years}$$
 
 $$c = \frac{3^2(1{,}330.38) + 4^2(1{,}278.22)}{2{,}608.60} \approx 12.43 \text{ years}^2$$
 
-### Exercise 3
+### Exercise 3 (Week 3 exercise sheet)
 
 The liabilities are £20 million in 10 years and £40 million in 15 years, with $r = 7\%$ continuously compounded. The assets are £$P$ million of 25-year zero-coupon bonds and £$Q$ million in the bank (which has duration 0).
 
