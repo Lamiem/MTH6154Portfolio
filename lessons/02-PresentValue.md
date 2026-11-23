@@ -132,6 +132,8 @@ To decide, I compare the IRR with the market rate. The IRR is 11.65%, which is h
 
 Since the internal rate of return beats the 6% market rate, buying the equipment is a good investment.
 
+## Solved exercises
+
 ### Exercise 2 (Week 2 exercise sheet): Job offers
 
 **Question:** After graduation you have two job offers, both for a fixed term of 3 years:
@@ -207,7 +209,6 @@ Which offer is better depends on the compounding method: Company A wins under an
 
 Continuous compounding at a nominal 3.75% produces a higher effective rate (about 3.82%, from $e^{0.0375} - 1$), meaning every future payment is discounted more heavily. This hurts Company A's large year-3 payment more than Company B, whose £15,000 signing bonus is paid today at $t = 0$ and isn't discounted at all.
 
-## Solved exercises
 
 ### Exercise 4 (Week 2 exercise sheet): Perpetuity
 
