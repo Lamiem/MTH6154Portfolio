@@ -24,6 +24,30 @@ From that comes the law of one price: if two investments give you the exact same
 
 $$PV = V_[T_1]C_1 + \dots + V_{T_n}C_n + V_{T_n}RP$$
 
+### 4. Bond yield
+
+If I don't know the market interest rate, I can't work out a bond's present value directly, so instead I take the bond's quoted issue price $P_0$ and work backwards to find the single hypothetical interest rate $r$ that makes the present value equal to $P_0$. That rate is the bond yield, which is really just the internal rate of return (IRR) of buying the bond:
+
+$$P_0 = \sum_{i=1}^{n} \frac{C_i}{(1+r)^{t_i}} + \frac{RP}{(1+r)^{t_n}}$$
+
+This equation has exactly one solution, for the same reason the IRR does. If the yield is higher than the market interest rate, the bond is a good investment, and if it's lower, it isn't. In general, the bond yield will not equal the coupon rate.
+
+### 5. Spot rates and the term structure
+
+In real life, interest rates usually depend on how long you're borrowing or depositing for (the term), mostly because of supply and demand: if lots of people want long loans, long rates go up, and if there's plenty of short cash around, short rates drop. That variation across terms is the term structure of interest rates. Markets usually quote annualised nominal rates $r_T$, where putting £$P$ in for term $T$ years pays back $P(1 + r_T T)$, so to compare terms fairly I turn them into effective annual rates called spot rates ($s_T$):
+
+$$s_T = (1 + r_T T)^{1/T} - 1 \quad \text{or} \quad (1 + s_T)^T = 1 + r_T T$$
+
+With spot rates, the discount factor to time $T$ is $D(T) = (1 + s_T)^{-T}$. I can also get spot rates straight from unit zero-coupon bond prices via $s_T = V_T^{-1/T} - 1$.
+
+### 6. Forward rates
+
+A forward rate $f_{n_1, n_2}$ is the fair, no-arbitrage interest rate I agree to today for a deposit or loan running from time $n_1$ to time $n_2$ (in years) in the future (a forward rate agreement, or FRA, where there's no option to back out once signed). Even though it feels like a guess about future rates, it isn't: it's completely fixed by today's spot rates (and zero-coupon bond prices) so that rolling over shorter investments ends up giving the same return as one longer investment:
+
+$$(1 + f_{n_1, n_2})^{n_2 - n_1} = \frac{(1 + s_{n_2})^{n_2}}{(1 + s_{n_1})^{n_1}} = \frac{V_{n_1}}{V_{n_2}}$$
+
+A forward rate starting right now ($n_1 = 0$) is just the spot rate ($f_{0,T} = s_T$), and chaining consecutive forward rates together multiplies out to the forward rate over the whole period (for example $(1+f_{2,4})^2(1+f_{4,7})^3 = (1+f_{2,7})^5$).
+
 ## My example
 
 ## Solved Exercises
