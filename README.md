@@ -27,5 +27,6 @@ I used Claude (an AI assistant) as a study helper throughout this portfolio. I u
 - check my arithmetic and point out errors in my working
 - give feedback on my drafts, such as unclear sentences and missing parts
 - explain how to write Excel formulas and fix errors in them, and suggest how to lay out the spreadsheet
+- For Week 3, Claude helped me plan and write the spreadsheet.
 
-I wrote the summaries, my example, the solved exercises and the spreadsheet myself.
+I wrote the summaries, my example, the solved exercises myself.
