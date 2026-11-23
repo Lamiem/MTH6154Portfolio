@@ -207,6 +207,8 @@ Which offer is better depends on the compounding method: Company A wins under an
 
 Continuous compounding at a nominal 3.75% produces a higher effective rate (about 3.82%, from $e^{0.0375} - 1$), meaning every future payment is discounted more heavily. This hurts Company A's large year-3 payment more than Company B, whose £15,000 signing bonus is paid today at $t = 0$ and isn't discounted at all.
 
+## Solved exercises
+
 ### Exercise 4 (Week 2 exercise sheet): Perpetuity
 
 **Question:** A perpetuity pays £2,500 every year. The effective annual interest rate is 4%. Calculate its present value if: (a) the first payment is in one years time, (b) the first payment is today, (c) the first payment is in 10 years' time.
