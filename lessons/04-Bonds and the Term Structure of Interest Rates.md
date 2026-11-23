@@ -3,3 +3,9 @@
 [Back to contents](../README.md)
 
 ## Summary
+
+## My example
+
+## Solved Exercises
+
+## Spreadsheet
