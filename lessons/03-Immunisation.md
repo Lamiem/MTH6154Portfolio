@@ -86,7 +86,86 @@ To see how it behaves if rates move to $6\%$ ($r = 0.06$, continuous compounding
 
 The assets come out about £3.34 ahead of the liabilities (£7,411.52 against £7,408.18), which is what Redington immunisation predicts. This means a small change in interest rates does not hurt my net position.
 
-## Solved Exercises
+## Solved exercises
+
+### Exercise 2
+
+The interest rate is $4\%$, continuously compounded, so a payment $C$ at time $t$ has present value $Ce^{-0.04t}$. For continuous compounding, the effective duration equals the duration.
+
+**(a) Investment: £1,000 at the end of year 2 and £500 at the end of year 3**
+
+Present values:
+
+$$PV_2 = 1{,}000e^{-0.04 \times 2} \approx £923.12, \qquad PV_3 = 500e^{-0.04 \times 3} \approx £443.46$$
+
+$$V = 923.12 + 443.46 = £1{,}366.58$$
+
+Duration (the average time to receive the money, weighted by present values):
+
+$$D = \frac{2(923.12) + 3(443.46)}{1{,}366.58} \approx 2.324 \text{ years}$$
+
+Effective duration, which measures how sensitive the value is to a change in the interest rate:
+
+$$\nu = D \approx 2.324 \text{ years}$$
+
+Convexity:
+
+$$c = \frac{2^2(923.12) + 3^2(443.46)}{1{,}366.58} \approx 5.623 \text{ years}^2$$
+
+**(b) Liability: £1,500 at the end of years 3 and 4**
+
+$$PV_3 = 1{,}500e^{-0.04 \times 3} \approx £1{,}330.38, \qquad PV_4 = 1{,}500e^{-0.04 \times 4} \approx £1{,}278.22$$
+
+$$V = 1{,}330.38 + 1{,}278.22 = £2{,}608.60$$
+
+$$D = \frac{3(1{,}330.38) + 4(1{,}278.22)}{2{,}608.60} \approx 3.49 \text{ years}$$
+
+$$\nu = D \approx 3.49 \text{ years}$$
+
+$$c = \frac{3^2(1{,}330.38) + 4^2(1{,}278.22)}{2{,}608.60} \approx 12.43 \text{ years}^2$$
+
+### Exercise 3
+
+The liabilities are £20 million in 10 years and £40 million in 15 years, with $r = 7\%$ continuously compounded. The assets are £$P$ million of 25-year zero-coupon bonds and £$Q$ million in the bank (which has duration 0).
+
+**(a) Present values and durations**
+
+Present value of the liabilities:
+
+$$PV_{10} = 20e^{-0.07 \times 10} \approx 9.932, \qquad PV_{15} = 40e^{-0.07 \times 15} \approx 13.998$$
+
+$$V_L \approx 23.929 \text{ million}$$
+
+Duration of the liabilities:
+
+$$D_L = \frac{10(9.932) + 15(13.998)}{23.929} \approx 12.925 \text{ years}$$
+
+The 25-year bonds have present value $Pe^{-1.75}$ and duration 25. The bank money has present value $Q$ and duration 0. To match the durations:
+
+$$25 \times Pe^{-1.75} = 10(9.932) + 15(13.998) \approx 309.28$$
+
+$$Pe^{-1.75} \approx 12.371, \qquad P = \frac{12.371}{e^{-1.75}} \approx 71.2 \text{ million}$$
+
+To match the present values:
+
+$$Pe^{-1.75} + Q = 23.929 \quad \Rightarrow \quad 12.371 + Q = 23.929 \quad \Rightarrow \quad Q \approx 11.56 \text{ million}$$
+
+**(b) Convexities**
+
+Liabilities:
+
+$$c_L = \frac{10^2(9.932) + 15^2(13.998)}{23.929} \approx 173.12$$
+
+Assets:
+
+$$c_A = \frac{25^2(12.371)}{23.929} \approx 323.12$$
+
+Redington immunisation needs the assets' convexity to be greater than the liabilities' convexity. Since $323.12 > 173.12$, these values of $P$ and $Q$ achieve Redington immunisation.
+
+**(c) 5-year bonds instead**
+
+The assets would be 5-year bonds (duration 5) and bank money (duration 0), so their combined duration can never be more than 5 years. The liabilities have duration $12.925$ years, so $D_A \neq D_L$ and first-order immunisation is impossible.
+
 
 ## Spreadsheet
 
