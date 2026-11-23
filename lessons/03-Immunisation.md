@@ -61,6 +61,31 @@ $$V(r) = \sum_{i=1}^{n} C_i \beta^{t_i}$$
 
 ## My example
 
+I owe £10,000 in 5 years, and I want assets that stay at least as valuable if rates change. Suppose the interest rate is $r = 5\%$ ($0.05$) and is compounded continuously, giving the discount factor $\beta = e^{-0.05} \approx 0.9512$. My liability has a present value of $10{,}000\beta^5 \approx £7{,}788.01$, a duration of 5 years, and a convexity of $5^2 = 25$.
+
+To build the assets, I pick 2-year and 8-year zero-coupon bonds paying $P$ and $Q$. I chose one maturity shorter than 5 years and one longer so the mix can have a duration of 5. Because interest is continuously compounded, effective duration equals duration ($\nu = \tau$). The first equation matches present values, and the second matches effective durations:
+
+$$P\beta^2 + Q\beta^8 = 10{,}000\beta^5$$
+
+$$2P\beta^2 + 8Q\beta^8 = 50{,}000\beta^5$$
+
+Subtracting twice the first equation from the second removes $P$ and leaves $6Q\beta^8 = 30{,}000\beta^5$. Solving for $Q$ and then $P$ gives $Q = 5{,}000\beta^{-3} \approx £5{,}809.17$ and $P = 5{,}000\beta^3 \approx £4{,}303.54$.
+
+Next, I check convexity using the continuous-compounding formula:
+
+$$c_A = \frac{2^2 P\beta^2 + 8^2 Q\beta^8}{10{,}000\beta^5} = \frac{4(5{,}000\beta^5) + 64(5{,}000\beta^5)}{10{,}000\beta^5} = 34$$
+
+Since $V_A = V_L$, $\nu_A = \nu_L$, and $c_A = 34 \ge 25 = c_L$, Redington immunisation is satisfied.
+
+To see how it behaves if rates move to $6\%$ ($r = 0.06$, continuous compounding):
+
+* Liability present value: $10{,}000 e^{-0.06 \times 5} = 10{,}000 e^{-0.30} \approx £7{,}408.18$.
+* 2-year bond present value: $P e^{-0.06 \times 2} \approx 4{,}303.54 \times 0.8869 \approx £3{,}816.90$.
+* 8-year bond present value: $Q e^{-0.06 \times 8} \approx 5{,}809.17 \times 0.6188 \approx £3{,}594.62$.
+* Total asset present value: about £7,411.52.
+
+The assets come out about £3.34 ahead of the liabilities (£7,411.52 against £7,408.18), which is what Redington immunisation predicts. This means a small change in interest rates does not hurt my net position.
+
 ## Solved Exercises
 
 ## Spreadsheet
