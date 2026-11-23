@@ -168,3 +168,8 @@ Switching to 5-year bonds means the portfolio only holds assets maturing at 0 ye
 
 ## Spreadsheet
 
+[03-Immunisation.xlsx](../spreadsheets/03-Immunisation.xlsx)
+
+This spreadsheet checks Redington immunisation for my example: a £10,000 liability due in 5 years, matched with 2-year and 8-year zero-coupon bonds at 5% interest, continuously compounded. The yellow cells are the only inputs, and everything else recalculates from them. The payments $P$ and $Q$ are found by splitting the liability's present value between the two bonds so that their total value and duration match the liability, then converting each share into a payment at maturity.
+
+The three Yes/No checks confirm the conditions hold: the present values and durations match, and the assets' convexity is 34, above the liability's 25. The table and chart show that asset value never falls below liability value as the rate moves from 3% to 7%. At 6% the spreadsheet gives £3.33, while my example page says £3.34, because the spreadsheet uses unrounded values and the page used rounded ones. To explore it, try changing the long bond maturity in B8 (keep it above 5, because the mix needs one bond longer than the liability) and watch $P$ and $Q$ change.
