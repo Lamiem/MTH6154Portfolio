@@ -126,7 +126,7 @@ $$c = \frac{3^2(1{,}330.38) + 4^2(1{,}278.22)}{2{,}608.60} \approx 12.43 \text{ 
 
 ### Exercise 3 (Week 3 exercise sheet)
 
-The liabilities are £20 million in 10 years and £40 million in 15 years, with $r = 7\%$ continuously compounded. The assets are £$P$ million of 25-year zero-coupon bonds and £$Q$ million in the bank (which has duration 0).
+The pension fund owes £20 million in 10 years and £40 million in 15 years under a continuously compounded rate of $r = 7\%$. To cover this, it puts £$Q$ million into a bank account (held as cash, so its duration is 0) and buys 25-year zero-coupon bonds paying £$P$ million at maturity.
 
 **(a) Present values and durations**
 
@@ -160,12 +160,11 @@ Assets:
 
 $$c_A = \frac{25^2(12.371)}{23.929} \approx 323.12$$
 
-Redington immunisation needs the assets' convexity to be greater than the liabilities' convexity. Since $323.12 > 173.12$, these values of $P$ and $Q$ achieve Redington immunisation.
+We already lined up the present values and durations in part (a), and since $c_A = 323.12 > 173.12 = c_L$, all three conditions are met and Redington immunisation holds.
 
 **(c) 5-year bonds instead**
 
-The assets would be 5-year bonds (duration 5) and bank money (duration 0), so their combined duration can never be more than 5 years. The liabilities have duration $12.925$ years, so $D_A \neq D_L$ and first-order immunisation is impossible.
-
+Switching to 5-year bonds means the portfolio only holds assets maturing at 0 years (the bank balance) and 5 years (the bonds). Because the duration of a mix always sits between its shortest and longest maturity, the assets' duration can never exceed 5 years, so it cannot reach the liabilities' $12.925$-year duration, making first-order immunisation impossible.
 
 ## Spreadsheet
 
