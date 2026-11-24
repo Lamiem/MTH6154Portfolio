@@ -81,4 +81,94 @@ So the no-arbitrage price is £20,017.86 (to the nearest penny), slightly above 
 
 ## Solved Exercises
 
+### Exercise 5 (Coursework 4)
+
+**Question:** Suppose that the 1, 2 and 3-year LIBOR rates are 3.5%, 4% and 4.7%, respectively. Suppose also that the forward rates $f_{3,5}$ and $f_{4,5}$ are 5% and 4.9% respectively. Calculate:
+
+* (a) The spot rates $s_1, s_2$ and $s_3$ and the forward rate $f_{3,4}$.
+* (b) The spot rate $s_4$.
+* (c) The present value of a cash-flow stream consisting of two payments of £100 after 3 and 4 years, respectively.
+
+**(a) Spot rates $s_1, s_2, s_3$ and forward rate $f_{3,4}$**
+
+LIBOR rates are quoted as annualised nominal rates $r_T$, so I convert them into effective annual spot rates using $s_T = (1 + r_T T)^{1/T} - 1$:
+
+$$s_1 = (1 + 0.035 \times 1)^{1/1} - 1 = 0.035$$
+
+$$s_2 = (1 + 0.04 \times 2)^{1/2} - 1 = (1.08)^{0.5} - 1 \approx 0.03923$$
+
+$$s_3 = (1 + 0.047 \times 3)^{1/3} - 1 = (1.141)^{1/3} - 1 \approx 0.04495$$
+
+So $s_1 = 3.5$%, $s_2 \approx 3.923$% and $s_3 \approx 4.495$%.
+
+To get $f_{3,4}$, I chain the consecutive forward rates from year 3 to year 5 so they multiply out to the rate over the whole period:
+
+$$(1 + f_{3,4})(1 + f_{4,5}) = (1 + f_{3,5})^2$$
+
+$$(1 + f_{3,4})(1.049) = (1.05)^2$$
+
+$$1 + f_{3,4} = \frac{1.1025}{1.049} \approx 1.051001$$
+
+So $f_{3,4} \approx 0.05100$, which is 5.100%.
+
+**(b) Spot rate $s_4$**
+
+Using the forward rate formula $(1 + f_{n_1, n_2})^{n_2 - n_1} = \frac{(1 + s_{n_2})^{n_2}}{(1 + s_{n_1})^{n_1}}$ with $n_1 = 3$ and $n_2 = 4$:
+
+$$(1 + s_4)^4 = (1 + s_3)^3 (1 + f_{3,4})$$
+
+From part (a), $(1 + s_3)^3 = 1.141$ and $1 + f_{3,4} = \frac{1.1025}{1.049}$:
+
+$$(1 + s_4)^4 = 1.141 \times \frac{1.1025}{1.049} \approx 1.199192$$
+
+$$s_4 = (1.199192)^{1/4} - 1 \approx 0.04646$$
+
+So $s_4 \approx 4.646$%.
+
+**(c) Present value of the cash-flow stream**
+
+By the law of one price, I discount each £100 payment back to today using $D(T) = (1 + s_T)^{-T}$ and add them up:
+
+$$PV = 100\,D(3) + 100\,D(4) = \frac{100}{(1 + s_3)^3} + \frac{100}{(1 + s_4)^4}$$
+
+Using the exact values $(1 + s_3)^3 = 1.141$ and $(1 + s_4)^4 \approx 1.199192$:
+
+$$PV \approx \frac{100}{1.141} + \frac{100}{1.199192} \approx 87.6424 + 83.3895 = £171.03$$
+
+to the nearest penny.
+
+### Exercise 10 (Coursework 4)
+
+**Question:** A bond is said to be ex coupon if it is sold under the proviso that the investor will not be paid the next coupon from the bond. Suppose an investor purchases an ex-coupon bond with face value of £100, redeemable at par, which pays semi-annual coupons at a rate of 8% per annum. There are 8 days until the next coupon (which will not be paid) and the bond expires 7 years after this coupon. If the bond yield is 6%, calculate the purchase price of the bond.
+
+**How I do it:**
+
+First, I work out the size of each coupon. Because it pays semi-annual coupons ($m = 2$) at 8% per annum on a £100 face value, each half-yearly coupon is:
+
+$$C = \frac{0.08 \times 100}{2} = £4$$
+
+Since the bond is redeemable at par ($R = 1$), the final redemption payment at expiry is £100.
+
+Next, I figure out which payments I actually get and when they arrive. The very next coupon is in 8 days, which is $\frac{8}{365}$ years away, and because the bond is ex-coupon, I skip that one. The bond expires 7 years after that skipped coupon, so over those 7 years there are $7 \times 2 = 14$ semi-annual coupons left that I will receive.
+
+To make the discounting clean, I first find the value of all those remaining payments as of the next coupon date (8 days from now). From that date, the 14 remaining £4 coupons arrive at $0.5, 1, 1.5, \dots, 7$ years, plus the £100 redemption at year 7. Using the bond yield $r = 0.06$, the value on that date is:
+
+$$PV_{\text{next coupon date}} = \sum_{k=1}^{14} \frac{4}{(1.06)^{k/2}} + \frac{100}{(1.06)^7}$$
+
+Using the geometric series formula $\sum_{k=1}^{14} x^k = \frac{x(1 - x^{14})}{1 - x}$ with $x = (1.06)^{-0.5} \approx 0.97128586$:
+
+$$\sum_{k=1}^{14} \frac{1}{(1.06)^{k/2}} = \frac{0.97128586\big(1 - (1.06)^{-7}\big)}{1 - 0.97128586} \approx \frac{0.97128586(1 - 0.66505711)}{0.02871414} \approx 11.32979$$
+
+So the value 8 days from now is:
+
+$$PV_{\text{next coupon date}} \approx 4(11.32979) + 100(0.66505711) \approx 45.3192 + 66.5057 = £111.8249$$
+
+Finally, by the law of one price, I discount this amount back by the remaining 8 days ($\frac{8}{365}$ years) to get today's purchase price $P_0$:
+
+$$P_0 = \frac{PV_{\text{next coupon date}}}{(1.06)^{8/365}} \approx \frac{111.8249}{1.0012779} \approx £111.68$$
+
+to the nearest penny. (I kept unrounded values on my calculator in the intermediate steps so there is no rounding error.)
+
+So the purchase price of the bond is £111.68 (above par because the 8% coupon rate is higher than the 6% yield, even after missing the imminent coupon).
+
 ## Spreadsheet
