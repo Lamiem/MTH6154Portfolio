@@ -50,6 +50,37 @@ A forward rate starting right now ($n_1 = 0$) is just the spot rate ($f_{0,T} = 
 
 ## My example
 
+**Question:** Work out the no arbitrage price of a 3 year bond with face value £20,000, redeemed at par, paying $5\%$ annual coupons, when the spot rates are:
+
+$$(s_1, s_2, s_3) = (4\%, 4.5\%, 5\%)$$
+
+**How I do it:**
+
+First, each annual coupon is $5\%$ of the £20,000 face value:
+
+$$C = 0.05 \times 20{,}000 = £1{,}000$$
+
+Since it's redeemed at par ($R = 1$), the final redemption payment in year 3 is £20,000.
+
+By the law of one price, the no-arbitrage price equals the present value of the cash flows, discounted with the spot rates. Next, I find the discount factor for each year using $D(t) = (1 + s_t)^{-t}$:
+
+$$D(1) = (1.04)^{-1} \approx 0.96154$$
+
+$$D(2) = (1.045)^{-2} \approx 0.91573$$
+
+$$D(3) = (1.05)^{-3} \approx 0.86384$$
+
+Now I discount every cash flow back to today and add them up:
+
+$$PV = 1{,}000\big(D(1) + D(2) + D(3)\big) + 20{,}000\,D(3)$$
+
+$$PV \approx 1{,}000(0.96154 + 0.91573 + 0.86384) + 20{,}000\,D(3) \approx 2{,}741.11 + 17{,}276.75 = £20{,}017.86$$
+
+(The discount factors above are rounded to 5 decimal places. I used the unrounded values on my calculator, so the redemption term is £17,276.75 rather than the £17,276.80 I would get from $20{,}000 \times 0.86384$.)
+
+So the no arbitrage price is £20,017.86 (to the nearest penny), slightly above £20,000 because the spot rates in years 1 and 2 are below the $5\%$ coupon rate. If all the spot rates were flat at $5\%$, the bond would trade at par, for exactly £20,000.
+
+
 ## Solved Exercises
 
 ## Spreadsheet
