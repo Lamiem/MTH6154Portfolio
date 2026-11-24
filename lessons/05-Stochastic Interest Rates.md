@@ -2,6 +2,8 @@
 
 [Back to contents](../README.md)
 
+## My Summary
+
 ### 1. Fixed interest rate model
 
 Now interest rates are random (stochastic) rather than known in advance. In the simplest setup, one random rate $R$ applies for the whole $n$ years, so putting £P in gives $P(1 + R)^n$. The main trap is that you can't just plug the average interest rate into the formula:
@@ -24,7 +26,7 @@ If I instead put in fixed amounts $P_i$ every year, the balance $A_n$ builds up 
 
 
 
-## My Summary
+
 
 ## My example
 
