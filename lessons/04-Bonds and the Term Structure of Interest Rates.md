@@ -1,4 +1,4 @@
-# 4. Bonds and the Term Structure of Interest Rates
+# 4. Bonds
 
 [Back to contents](../README.md)
 
