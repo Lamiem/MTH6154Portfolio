@@ -18,6 +18,15 @@ Using this result, I can find probabilities for $S_n$ directly using the standar
 
 $$\mathbb{P}(S_n \le x) = \Phi\left(\frac{\ln x - n\mu}{\sqrt{n}\,\sigma}\right)$$
 
+### 2. Shares
+
+Owning a share (or stock) means owning a small slice of a company. I write $S(t)$ for the share price at time $t$, which behaves randomly over time. Today's price $S(0)$ is known, while any future price $S(T)$ is uncertain. Although some shares pay dividends, I stick to non dividend paying shares so that the only way to make money from holding one is through the share price changing. Using the frictionless market hypothesis from earlier in the course, I make these standard assumptions:
+
+* I can buy or sell shares in any amount (even fractional amounts) at any time with zero transaction costs.
+* There is no bid-ask spread, meaning the buying and selling price of a share at any given moment is identical.
+* I can short-sell, which means borrowing a share to sell it now and buying it back later to return it (basically holding a negative number of shares, allowing me to profit if the price falls).
+
+Finally, an investor's portfolio can hold both shares and risk-free cash (a zero-coupon bond or a bank account), which sets up how I price forwards next.
 
 ## My example
 
