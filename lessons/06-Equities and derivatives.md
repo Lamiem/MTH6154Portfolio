@@ -1,3 +1,4 @@
+# 6. Equities and derivatives
 
 [Back to contents](../README.md)
 
