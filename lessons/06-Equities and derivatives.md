@@ -98,4 +98,78 @@ At $T = 0.5$, the contract settles at $F = 122.42$, and the profit depends on th
 
 ## Solved exercises
 
+### Exercise 3
+
+**Question:** Write down an expression of put-call parity if interest is continuously compounded.
+
+**Solution:**
+
+Put-call parity is a link between the price of a call and the price of a put that have the same strike $K$ and the same expiry $T$. To find it, I compare two portfolios and show they always end up worth the same at time $T$.
+
+* Portfolio A: I buy one European call with strike $K$, and I put some cash in the bank. I choose the amount so that it grows to exactly $K$ by time $T$. With continuous compounding at rate $r$, cash grows by a factor of $e^{rT}$, so I need to put in $Ke^{-rT}$ today (this is $K\,D(T)$, where $D(T) = e^{-rT}$).
+* Portfolio B: I buy one European put with the same strike $K$ and expiry $T$, and I buy one share.
+
+What each is worth at time $T$:
+
+**Case 1:** $S(T) \le K$ (the share ends up worth less than or equal to the strike)
+
+* Portfolio A: the call is worthless, so I just have the bank cash, which is now $K$. Total $= K$.
+* Portfolio B: the put pays $K - S(T)$ and my share is worth $S(T)$. Total $= K - S(T) + S(T) = K$.
+
+**Case 2:** $S(T) > K$ (the share ends up worth more than the strike)
+
+* Portfolio A: the call pays $S(T) - K$, plus the bank cash $K$. Total $= S(T)$.
+* Portfolio B: the put is worthless, so I just have the share. Total $= S(T)$.
+
+In both cases the two portfolios are worth exactly the same at time $T$ (both equal $\max(S(T), K)$).
+
+Since both portfolios give the same payoff whatever happens, the law of one price says they must cost the same today. If they didn't, I could buy the cheap one, sell the expensive one, and make a risk-free profit (arbitrage). Letting $C$ be the call price and $P$ the put price:
+
+* Cost of A today: $C + Ke^{-rT}$
+* Cost of B today: $P + S(0)$
+
+Setting these equal gives the put-call parity expression.
+
+**Answer:**
+
+$$C + Ke^{-rT} = P + S(0)$$
+
+which can also be written as $C - P = S(0) - Ke^{-rT}$.
+
+### Exercise 4
+
+**Question:** A stock is trading at £12, and European call and put options on it with maturity $T = 10$ and strike $K = 30$ cost £12.5 and £14.5 respectively. Assuming continuous compounding, use put-call parity to deduce the current interest rate.
+
+**Solution:**
+
+The stock pays no dividends and trades today at $S(0) = 12$. The European call and put options mature at $T = 10$ years with strike $K = 30$, and their current prices are $C = 12.5$ and $P = 14.5$ (all in pounds). Interest is continuously compounded at an unknown rate $r$.
+
+To find $r$, I use put-call parity, which holds because holding a European call plus $K D(T)$ in cash gives the exact same payoff at expiry $T$ as holding a European put plus one share (namely $\max(S(T), K)$), so by the law of one price both portfolios must cost the same today:
+
+$$C + K D(T) = P + S(0) \implies C - P = S(0) - K D(T)$$
+
+Since interest is continuously compounded at rate $r$, the discount factor is $D(T) = e^{-rT}$, so the equation becomes:
+
+$$C - P = S(0) - K e^{-rT}$$
+
+Next, I substitute the given values into the formula:
+
+$$12.5 - 14.5 = 12 - 30 e^{-10r}$$
+
+$$-2 = 12 - 30 e^{-10r}$$
+
+Rearranging to isolate the exponential term gives:
+
+$$30 e^{-10r} = 14$$
+
+$$e^{-10r} = \frac{14}{30} = \frac{7}{15}$$
+
+Taking the natural logarithm of both sides lets me solve for $r$:
+
+$$-10r = \ln\left(\frac{7}{15}\right)$$
+
+$$r = -\frac{1}{10} \ln\left(\frac{7}{15}\right) = \frac{1}{10} \ln\left(\frac{15}{7}\right) \approx 0.076214$$
+
+**Answer:** The current continuously compounded interest rate is about 7.62% per annum.
+
 ## Spreadsheet
