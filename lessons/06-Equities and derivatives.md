@@ -28,6 +28,24 @@ Owning a share (or stock) means owning a small slice of a company. I write $S(t)
 
 Finally, an investor's portfolio can hold both shares and risk-free cash (a zero-coupon bond or a bank account), which sets up how I price forwards next.
 
+
+### 3. Forwards
+
+A forward contract is a deal made today ($t = 0$) where two people agree to trade a specific asset at a set future date $T$ for a fixed forward price $F$. Entering to buy the asset is taking a long position, while entering to sell it is taking a short position. Unlike shares, a forward contract costs nothing to enter into today, and both sides are legally locked in to follow through at time $T$. People use forwards in two main ways:
+
+* Hedging: Locking in a price today to remove the risk of future price swings (for example, a company guaranteeing what it will pay for oil in six months).
+* Speculating: Betting on where the market is going: at time $T$, a long position yields a profit of $S(T) - F$ (while a short position yields $F - S(T)$), so I gain if the market moves in my favour and lose if it goes against me.
+
+Assuming the underlying asset pays no dividends and has no storage costs, the no-arbitrage principle forces a single fair forward price for an asset with current spot price $S(0)$:
+
+$$F = \frac{S(0)}{D(T)}$$
+
+where $D(T)$ is the discount factor to time $T$. This has to be the exact price because of how two replicating portfolios behave:
+
+* Portfolio A: Simply buy and hold the asset today, which costs $S(0)$ now and gives me the asset at time $T$.
+* Portfolio B: Enter a long forward contract (which costs $0$ today) and put $D(T)F$ into a zero-coupon bond or bank account. At time $T$, the cash grows to $F$, which I use to pay for and receive the asset through the forward.
+
+Since both setups leave me owning the exact same asset at time $T$, the law of one price says they must cost the exact same amount today ($S(0) = D(T)F$), otherwise someone could make risk-free arbitrage money.
 ## My example
 
 ## Solved exercises
