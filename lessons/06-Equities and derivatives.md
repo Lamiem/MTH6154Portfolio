@@ -61,7 +61,40 @@ $$\text{Call Payoff} = (S(T) - K)^+ = \begin{cases} 0, & \text{if } S(T) \le K \
 Conversely, I only exercise a European put option if the share price drops below $K$, allowing me to buy the share cheaply on the market and sell it at the higher strike price $K$. Its payoff is $(K - S(T))^+$:
 
 $$\text{Put Payoff} = (K - S(T))^+ = \begin{cases} K - S(T), & \text{if } S(T) < K \text{ (in-the-money)} \\ 0, & \text{if } S(T) \ge K \text{ (out-of-the-money / at-the-money)} \end{cases}$$
+
 ## My example
+
+**Fair forward price and replicating portfolios**
+
+Suppose a non-dividend paying share currently trades at a spot price of £120, so $S(0) = 120$. I want to enter into a forward contract to buy this share in $T = 0.5$ years (6 months). The continuously compounded risk-free interest rate is 4% per annum, so $r = 0.04$.
+
+### 1. Finding the fair forward price
+
+First, I calculate the discount factor to time $T = 0.5$:
+
+$$D(0.5) = e^{-0.04 \times 0.5} = e^{-0.02} \approx 0.980199$$
+
+Using the no-arbitrage pricing formula, the fair forward price $F$ is:
+
+$$F = \frac{S(0)}{D(0.5)} = \frac{120}{0.980199} \approx 122.42$$
+
+So the fair forward price is £122.42.
+
+### 2. Comparing replicating portfolios
+
+To see why $F = $ £122.42 must be the fair price, I compare two portfolios formed today ($t = 0$) that both leave me owning one share at $T = 0.5$:
+
+* Portfolio A: Buy one share today. This costs £120.00 now, and at $T = 0.5$ I hold the share.
+* Portfolio B: Enter a long forward contract (which costs £0 today) and deposit $D(0.5)F$ into a risk-free bank account. This costs $0.980199 \times 122.42 \approx 120.00$, so £120.00 today (to two decimal places). At $T = 0.5$, my bank deposit grows to £122.42, which I hand over to settle the forward contract and receive the share.
+
+Because both portfolios guarantee the exact same asset at $T = 0.5$, the law of one price requires them to cost the same today (£120.00 = £120.00), confirming there is no arbitrage opportunity.
+
+### 3. Profit and loss at expiry
+
+At $T = 0.5$, the contract settles at $F = 122.42$, and the profit depends on the market share price $S(0.5)$:
+
+* If the share price rises to $S(0.5) = 130.00$: the long position makes a profit of $S(0.5) - F = 130.00 - 122.42 = 7.58$, i.e. £7.58 (buying below market value), while the short position makes a loss of $F - S(0.5) = 122.42 - 130.00 = -7.58$, i.e. −£7.58.
+* If the share price falls to $S(0.5) = 115.00$: the long position makes a loss of $S(0.5) - F = 115.00 - 122.42 = -7.42$, i.e. −£7.42 (forced to overpay), while the short position makes a profit of $F - S(0.5) = 122.42 - 115.00 = 7.42$, i.e. £7.42.
 
 ## Solved exercises
 
